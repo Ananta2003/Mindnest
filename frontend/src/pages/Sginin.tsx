@@ -13,8 +13,8 @@ const REACT_BACKEND_URL = process.env.REACT_BACKEND_URL
 
 export const Signin =()=>{
 
-    const usernameRef = useRef<HTMLInputElement>();
-    const passwordRef = useRef<HTMLInputElement>();
+    const usernameRef = useRef<HTMLInputElement| null>(null);
+    const passwordRef = useRef<HTMLInputElement| null>(null);
     const navigate = useNavigate()
     
 
