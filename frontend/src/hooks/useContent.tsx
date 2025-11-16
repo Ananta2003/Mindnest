@@ -1,13 +1,15 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
-import { BACKEND_URL } from "../config";
+import dotenv from 'dotenv'
 
+dotenv.config()
+const REACT_BACKEND_URL = process.env.REACT_BACKEND_URL
 export function useContent(){
 
     const [contents , setContents]= useState([]);
 
     useEffect(()=>{
-        axios.get(`${BACKEND_URL}api/v1/bulk`,{
+        axios.get(`${REACT_BACKEND_URL}api/v1/bulk`,{
             headers:{
                 "Authorization": localStorage.getItem("token")
             }

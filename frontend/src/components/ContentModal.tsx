@@ -2,7 +2,10 @@ import { RxCross1 } from "react-icons/rx";
 import { Button } from "./Button";
 import { useRef, useState } from "react";
 import axios from "axios";
-import { BACKEND_URL } from "../config";
+import dotenv from 'dotenv'
+
+dotenv.config()
+const REACT_BACKEND_URL = process.env.REACT_BACKEND_URL
 
 export const ContentModal = ({ open, onClose }: any) => {
 
@@ -20,7 +23,7 @@ export const ContentModal = ({ open, onClose }: any) => {
         const title =  titleRef.current.value;
         const link = linkRef.current.value;
 
-        await axios.post(`${BACKEND_URL}api/v1/content`,{
+        await axios.post(`${REACT_BACKEND_URL}api/v1/content`,{
             title,
             type,
             link,

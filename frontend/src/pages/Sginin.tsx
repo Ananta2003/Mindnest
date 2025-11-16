@@ -1,9 +1,12 @@
 import { useRef } from "react"
 import { Button } from "../components/Button"
 import { Input } from "../components/Input"
-import { BACKEND_URL } from "../config";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
+import dotenv from 'dotenv'
+
+dotenv.config()
+const REACT_BACKEND_URL = process.env.REACT_BACKEND_URL
 
 
 
@@ -19,7 +22,7 @@ export const Signin =()=>{
     async function signin(){
         const username= usernameRef.current?.value;
         const password= passwordRef.current?.value;
-        const response = await axios.post(BACKEND_URL + "api/v1/signin",{
+        const response = await axios.post(REACT_BACKEND_URL + "api/v1/signin",{
                 username,
                 password
         })
