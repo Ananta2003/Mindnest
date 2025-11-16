@@ -5,12 +5,14 @@ import { JWT_PASSWORD } from './config';
 import { userMiddleware } from './middleware';
 import { randomHash } from './utils';
 import cors from "cors";
+import dotenv from 'dotenv'
 
+dotenv.config()
 const app = express()
 app.use(express.json())
 app.use(cors())
 
-const port = 3000;
+const port = process.env.PORT;
 
 
 app.post("/api/v1/signup", async(req,res)=>{

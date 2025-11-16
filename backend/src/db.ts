@@ -1,6 +1,9 @@
 import mongoose from "mongoose";
+import dotenv from 'dotenv'
+dotenv.config()
 
-mongoose.connect("mongodb+srv://ananta:ipQK9ZTmUhI80VLA@cluster0.vkfa3.mongodb.net/Brainly")
+const MONGO_URL : any= process.env.MONGO_URL
+mongoose.connect(MONGO_URL)
 
 const userData = new mongoose.Schema ({
     username:{type:String , unique: true},
