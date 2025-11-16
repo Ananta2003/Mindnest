@@ -1,0 +1,25 @@
+# Node.js dependencies
+node_modules/
+npm-debug.log*
+
+# Environment variables
+.env
+
+# Build artifacts
+dist/
+build/
+
+# Log files
+*.log
+logs/
+
+# IDE-specific files
+.idea/
+.vscode/
+
+# Operating system files
+.DS_Store
+Thumbs.db
+
+# Any other local or temporary files you want to exclude
+temp/
