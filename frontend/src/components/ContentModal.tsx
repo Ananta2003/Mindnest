@@ -2,10 +2,8 @@ import { RxCross1 } from "react-icons/rx";
 import { Button } from "./Button";
 import { useRef, useState, type RefObject } from "react";
 import axios from "axios";
-import dotenv from 'dotenv'
 
-dotenv.config()
-const REACT_BACKEND_URL = process.env.REACT_BACKEND_URL
+const REACT_BACKEND_URL = import.meta.env.VITE_REACT_BACKEND_URL
 
 interface ContentResponse{
     open:boolean,

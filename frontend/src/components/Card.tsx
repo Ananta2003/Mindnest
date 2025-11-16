@@ -2,10 +2,9 @@ import { LuNotebookText } from "react-icons/lu";
 import { IoShareSocial } from "react-icons/io5";
 import { RiDeleteBinLine } from "react-icons/ri";
 import axios from "axios";
-import dotenv from 'dotenv'
-dotenv.config()
 
-const REACT_BACKEND_URL = process.env.REACT_BACKEND_URL
+
+const REACT_BACKEND_URL = import.meta.env.VITE_REACT_BACKEND_URL
 export interface cardItems {
     text: string,
     link: string,

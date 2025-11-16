@@ -6,7 +6,7 @@ import { useNavigate } from "react-router-dom";
 import dotenv from 'dotenv'
 
 dotenv.config()
-const REACT_BACKEND_URL = process.env.REACT_BACKEND_URL
+const REACT_BACKEND_URL = import.meta.env.VITE_REACT_BACKEND_URL
 
 
 
