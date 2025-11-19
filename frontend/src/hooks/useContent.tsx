@@ -1,9 +1,7 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
-import dotenv from 'dotenv'
 
-dotenv.config()
-const REACT_BACKEND_URL = import.meta.env.VITE_REACT_BACKEND_URL
+const REACT_BACKEND_URL = import.meta.env.VITE_APP_BACKEND_URL
 export function useContent(){
 
     const [contents , setContents]= useState([]);

@@ -3,17 +3,15 @@ import { Button } from "../components/Button"
 import { Input } from "../components/Input"
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
-import dotenv from 'dotenv'
 
-dotenv.config()
-const REACT_BACKEND_URL = import.meta.env.VITE_REACT_BACKEND_URL
+const REACT_BACKEND_URL = import.meta.env.REACT_APP_BACKEND_URL
 
 
 
 export const Signup = () => {
 
-    const usernameRef = useRef<HTMLInputElement| null>(null);
-    const passwordRef = useRef<HTMLInputElement| null>(null);
+    const usernameRef = useRef<HTMLInputElement | null>(null);
+    const passwordRef = useRef<HTMLInputElement | null>(null);
     const navigate = useNavigate();
 
 

@@ -4,33 +4,28 @@ import { Input } from "../components/Input"
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
 
+const REACT_BACKEND_URL = import.meta.env.REACT_APP_BACKEND_URL
 
-const REACT_BACKEND_URL = import.meta.env.VITE_REACT_BACKEND_URL
+export const Signin = () => {
 
-
-
-
-export const Signin =()=>{
-
-    const usernameRef = useRef<HTMLInputElement| null>(null);
-    const passwordRef = useRef<HTMLInputElement| null>(null);
+    const usernameRef = useRef<HTMLInputElement | null>(null);
+    const passwordRef = useRef<HTMLInputElement | null>(null);
     const navigate = useNavigate()
-    
 
 
-    async function signin(){
-        const username= usernameRef.current?.value;
-        const password= passwordRef.current?.value;
-        const response = await axios.post(REACT_BACKEND_URL + "api/v1/signin",{
-                username,
-                password
+    async function signin() {
+        const username = usernameRef.current?.value;
+        const password = passwordRef.current?.value;
+        const response = await axios.post(REACT_BACKEND_URL + "api/v1/signin", {
+            username,
+            password
         })
         const jwt = response.data.token;
-        localStorage.setItem("token",jwt);
+        localStorage.setItem("token", jwt);
         navigate('/dashboard')
-        }
-        
- 
+    }
+
+
     return <div className="w-full h-screen bg-White flex items-center justify-center">
         <div className="min-w-48 h-2/3 bg-White shadow-2xl p-8 rounded-xl">
             <h1 className="flex justify-center text-4xl p-4 mb-4">Sign In</h1>

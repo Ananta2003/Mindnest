@@ -3,7 +3,7 @@ import { Button } from "./Button";
 import { useRef, useState, type RefObject } from "react";
 import axios from "axios";
 
-const REACT_BACKEND_URL = import.meta.env.VITE_REACT_BACKEND_URL
+const REACT_BACKEND_URL = import.meta.env.VITE_APP_BACKEND_URL
 
 interface ContentResponse{
     open:boolean,
@@ -46,7 +46,7 @@ export const ContentModal = ({ open, onClose }:ContentResponse) => {
     return <div>
         {open && <div>
             <div className="w-screen h-screen bg-slate-500 fixed left-0 right-0 opacity-60 flex justify-center  "></div>
-            <div className="w-screen h-screen  fixed left-0 right-0 opacity-100 flex justify-center ">
+            <div className="w-screen h-screen fixed left-0 right-0 opacity-100 flex justify-center ">
                 <div className="flex flex-col justify-center">
                     <span className="opacity-100 bg-white p-4 rounded-md">
                         <div className="flex justify-end" onClick={onClose}>
