@@ -4,7 +4,7 @@ import { Input } from "../components/Input"
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
 
-const REACT_BACKEND_URL = import.meta.env.REACT_APP_BACKEND_URL
+const REACT_BACKEND_URL = import.meta.env.VITE_APP_BACKEND_URL
 
 export const Signin = () => {
 
