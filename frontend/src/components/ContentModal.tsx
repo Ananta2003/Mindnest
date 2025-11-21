@@ -49,7 +49,7 @@ export const ContentModal = ({ open, onClose }:ContentResponse) => {
             <div className="w-screen h-screen fixed left-0 right-0 opacity-100 flex justify-center ">
                 <div className="flex flex-col justify-center">
                     <span className="opacity-100 bg-white p-4 rounded-md">
-                        <div className="flex justify-end" onClick={onClose}>
+                        <div className="flex justify-end cursor-pointer" onClick={onClose}>
                             <RxCross1 />
                         </div>
                         <div>
