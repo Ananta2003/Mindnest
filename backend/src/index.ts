@@ -12,6 +12,13 @@ const app = express()
 app.use(express.json())
 app.use(cors())
 
+app.use(
+  cors({
+    origin: ["https://mindnest-frontend-adsf.onrender.com/"],
+    credentials: true,
+  })
+);
+
 const port = process.env.PORT;
 
 
